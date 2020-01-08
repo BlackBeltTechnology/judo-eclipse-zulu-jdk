@@ -9,7 +9,7 @@
 
     <groupId>hu.blackeblt.judo.eclipse.jdk.zulu</groupId>
 	<artifactId>parent</artifactId>
-    <version>8.0.232</version>
+    <version>8.0.232-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>Bundled Oracle Java JRE</name>
@@ -75,8 +75,14 @@
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
+            <plugin>
+                <groupId>org.eclipse.tycho</groupId>
+                <artifactId>tycho-versions-plugin</artifactId>
+                <version>${tycho-version}</version>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-maven-plugin</artifactId>
 				<version>${tycho-version}</version>
 				<extensions>true</extensions>

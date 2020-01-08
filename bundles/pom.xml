@@ -6,11 +6,11 @@
 	<parent>
         <groupId>hu.blackeblt.judo.eclipse.jdk.zulu</groupId>
         <artifactId>parent</artifactId>
-        <version>8.0.232</version>
+        <version>8.0.232-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
 
-    <artifactId>bundles</artifactId>
+    <artifactId>jdk-bundles</artifactId>
 	<packaging>pom</packaging>
 
 	<properties>

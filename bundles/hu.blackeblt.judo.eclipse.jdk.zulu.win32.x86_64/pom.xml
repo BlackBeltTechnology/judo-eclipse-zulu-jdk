@@ -4,8 +4,8 @@
 
     <parent>
         <groupId>hu.blackeblt.judo.eclipse.jdk.zulu</groupId>
-        <artifactId>bundles</artifactId>
-        <version>8.0.232</version>
+        <artifactId>jdk-bundles</artifactId>
+        <version>8.0.232-SNAPSHOT</version>
         <relativePath>..</relativePath>
     </parent>
 
