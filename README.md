@@ -1,5 +1,7 @@
 # About
 
+The project is derived from https://github.com/buchen/bundled-jre, but we here we use different namespace and JDK is embedded not the JRE.
+
 An Eclipse feature of OSGi bundles packaging the Java Runtime Engine (JRE) for Windows, Mac, and Linux.
 It is used to bundle and distribute the JRE with the [Portfolio Performance](https://www.portfolio-performance.info) Eclipse e4 application.
 
