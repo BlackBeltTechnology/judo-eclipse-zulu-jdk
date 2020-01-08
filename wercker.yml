@@ -30,7 +30,7 @@ build:
     # Hack - because some unknown reason maven does not update parent version of bunles module
     - blackbelttechnology/pom-update-parent@1.0.0:
       version: ${VERSION_NUMBER}
-      pom: ${WERCKER_ROOT}/bundles/pom.xml -DuseCustomSettings=true
+      pom: ${WERCKER_ROOT}/bundles/pom.xml
 
     - wercker/maven:
       name: Update Eclipse metadata
@@ -143,7 +143,7 @@ release:
     # Hack - because some unknown reason maven does not update parent version of bunles module
     - blackbelttechnology/pom-update-parent@1.0.0:
       version: ${VERSION_NUMBER}
-      pom: ${WERCKER_ROOT}/bundles/pom.xml -DuseCustomSettings=true
+      pom: ${WERCKER_ROOT}/bundles/pom.xml
 
     - wercker/maven:
       name: Update Eclipse metadata
