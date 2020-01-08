@@ -27,11 +27,6 @@ build:
       settings: .maven.xml
       cache_repo: true
 
-    # Hack - because some unknown reason maven does not update parent version of bunles module
-    - blackbelttechnology/pom-update-parent@1.0.0:
-      version: ${VERSION_NUMBER}
-      pom: ${WERCKER_ROOT}/bundles/pom.xml
-
     - wercker/maven:
       name: Update Eclipse metadata
       goals: tycho-versions:update-eclipse-metadata
@@ -139,11 +134,6 @@ release:
       maven_opts: -Dtycho.mode=maven -DnewVersion=${VERSION_FROM_POM_BASE_VERSION} -DgenerateBackupPoms=false
       settings: .maven.xml
       cache_repo: true
-
-    # Hack - because some unknown reason maven does not update parent version of bunles module
-    - blackbelttechnology/pom-update-parent@1.0.0:
-      version: ${VERSION_NUMBER}
-      pom: ${WERCKER_ROOT}/bundles/pom.xml
 
     - wercker/maven:
       name: Update Eclipse metadata
