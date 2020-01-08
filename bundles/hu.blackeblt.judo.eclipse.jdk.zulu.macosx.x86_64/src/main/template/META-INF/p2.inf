@@ -1,0 +1,11 @@
+instructions.configure = \
+  org.eclipse.equinox.p2.touchpoint.eclipse.setJvm(jvm:../Eclipse/plugins/hu.blackeblt.judo.eclipse.jdk.zulu.macosx.x86_64_${version}/Contents/Home/jre/lib/server/libjvm.dylib);
+
+instructions.unconfigure = \
+  org.eclipse.equinox.p2.touchpoint.eclipse.setJvm(jvm:null);
+
+instructions.install = \
+  org.eclipse.equinox.p2.touchpoint.eclipse.chmod(targetDir:${installFolder}/plugins/hu.blackeblt.judo.eclipse.jdk.zulu.macosx.x86_64_${version}/Contents/Home/jre,targetFile:bin,permissions:755,options:-R);\
+  org.eclipse.equinox.p2.touchpoint.eclipse.chmod(targetDir:${installFolder}/plugins/hu.blackeblt.judo.eclipse.jdk.zulu.macosx.x86_64_${version}/Contents/Home/jre/lib,targetFile:jspawnhelper,permissions:755);\
+  org.eclipse.equinox.p2.touchpoint.natives.mkdir(path:${installFolder}/plugins/hu.blackeblt.judo.eclipse.jdk.zulu.macosx.x86_64_${version}/Contents/MacOS);\
+  org.eclipse.equinox.p2.touchpoint.natives.ln(linkTarget:../Home/jre/lib/jli/libjli.dylib,targetDir:${installFolder}/plugins/hu.blackeblt.judo.eclipse.jdk.zulu.macosx.x86_64_${version}/Contents/MacOS,linkName:libjli.dylib,force:true);
