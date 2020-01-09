@@ -1,0 +1,5 @@
+instructions.configure = \
+  org.eclipse.equinox.p2.touchpoint.eclipse.setJvm(jvm:plugins/hu.blackbelt.judo.eclipse.jdk.zulu.win32.x86_64_${qualifiedVersion}/jdk/bin);
+
+instructions.unconfigure = \
+  org.eclipse.equinox.p2.touchpoint.eclipse.setJvm(jvm:null);

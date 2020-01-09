@@ -3,18 +3,19 @@
 	<modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>hu.blackeblt.judo.eclipse.jdk.zulu</groupId>
+        <groupId>hu.blackbelt.judo.eclipse.jdk.zulu</groupId>
         <artifactId>jdk-bundles</artifactId>
         <version>8.0.232-SNAPSHOT</version>
         <relativePath>..</relativePath>
     </parent>
 
-    <artifactId>hu.blackeblt.judo.eclipse.jdk.zulu.win32.x86_64</artifactId>
-    <packaging>eclipse-plugin</packaging>
+    <artifactId>hu.blackbelt.judo.eclipse.jdk.zulu.macosx.x86_64</artifactId>
+	<packaging>eclipse-plugin</packaging>
 
 	<properties>
-		<download.filePostfix>win_x64.zip</download.filePostfix>
-		<download.unzippedFolderPostfix>win_x64</download.unzippedFolderPostfix>
+		<download.filePostfix>macosx_x64.zip</download.filePostfix>
+		<download.unzippedFolderPostfix>macosx_x64</download.unzippedFolderPostfix>
+		<jdk.folder>Contents/Home</jdk.folder>
 	</properties>
 
 	<build>
@@ -27,8 +28,8 @@
 					<pomDependencies>consider</pomDependencies>
 					<environments>
 						<environment>
-							<os>win32</os>
-							<ws>win32</ws>
+							<os>macosx</os>
+							<ws>cocoa</ws>
 							<arch>x86_64</arch>
 						</environment>
 					</environments>

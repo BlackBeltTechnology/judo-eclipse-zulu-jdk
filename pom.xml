@@ -6,7 +6,7 @@
 		<maven>3.0</maven>
 	</prerequisites>
 
-    <groupId>hu.blackeblt.judo.eclipse.jdk.zulu</groupId>
+    <groupId>hu.blackbelt.judo.eclipse.jdk.zulu</groupId>
 	<artifactId>parent</artifactId>
     <version>8.0.232-SNAPSHOT</version>
 	<packaging>pom</packaging>

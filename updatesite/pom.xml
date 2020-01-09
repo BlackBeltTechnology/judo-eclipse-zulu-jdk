@@ -4,13 +4,13 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>hu.blackeblt.judo.eclipse.jdk.zulu</groupId>
+    <groupId>hu.blackbelt.judo.eclipse.jdk.zulu</groupId>
     <artifactId>parent</artifactId>
     <version>8.0.232-SNAPSHOT</version>
     <relativePath>..</relativePath>
   </parent>
 
-  <artifactId>hu.blackeblt.judo.eclipse.jdk.zulu.updatesite</artifactId>
+  <artifactId>hu.blackbelt.judo.eclipse.jdk.zulu.updatesite</artifactId>
   <packaging>eclipse-repository</packaging>
 
   <properties>

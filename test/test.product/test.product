@@ -41,7 +41,7 @@
       <feature id="org.eclipse.ecf.filetransfer.ssl.feature"/>
       <feature id="org.eclipse.ecf.core.feature"/>
       <feature id="org.eclipse.ecf.filetransfer.feature"/>
-      <feature id="hu.blackeblt.judo.eclipse.jdk.zulu.feature"/>
+      <feature id="hu.blackbelt.judo.eclipse.jdk.zulu.feature"/>
    </features>
 
    <configurations>
