@@ -1,11 +1,7 @@
-instructions.configure = \
-  org.eclipse.equinox.p2.touchpoint.eclipse.setJvm(jvm:plugins/hu.blackbelt.judo.eclipse.jdk.zulu.linux.x86_64_${qualifiedVersion}/jdk/bin);
-
-instructions.unconfigure = \
-  org.eclipse.equinox.p2.touchpoint.eclipse.setJvm(jvm:null);
-
 instructions.install = \
-  org.eclipse.equinox.p2.touchpoint.eclipse.chmod(targetDir:${installFolder}/plugins/hu.blackbelt.judo.eclipse.jdk.zulu.linux.x86_64_${qualifiedVersion}/jdk/jre,targetFile:bin,permissions:755,options:-R);\
-  org.eclipse.equinox.p2.touchpoint.eclipse.chmod(targetDir:${installFolder}/plugins/hu.blackbelt.judo.eclipse.jdk.zulu.linux.x86_64_${qualifiedVersion}/jdk/jre/lib,targetFile:jexec,permissions:755);\
-  org.eclipse.equinox.p2.touchpoint.eclipse.chmod(targetDir:${installFolder}/plugins/hu.blackbelt.judo.eclipse.jdk.zulu.linux.x86_64_${qualifiedVersion}/jdk,targetFile:bin,permissions:755,options:-R);\
-  org.eclipse.equinox.p2.touchpoint.eclipse.chmod(targetDir:${installFolder}/plugins/hu.blackbelt.judo.eclipse.jdk.zulu.linux.x86_64_${qualifiedVersion}/jdk/lib,targetFile:jexec,permissions:755);
+org.eclipse.equinox.p2.touchpoint.eclipse.setJvm(jvm:${artifact.location}/jdk/jre/lib/amd64/server/libjvm.so);\
+org.eclipse.equinox.p2.touchpoint.eclipse.addJvmArg(jvmArg:-Xshareclasses:nonfatal);\
+org.eclipse.equinox.p2.touchpoint.eclipse.addProgramArg(programArg:-clean);\
+org.eclipse.equinox.p2.touchpoint.natives.chmod(targetDir:${artifact.location},targetFile:jdk/jre/bin,permissions:755,options:-R);
+instructions.uninstall = \
+org.eclipse.equinox.p2.touchpoint.eclipse.setJvm(jvm:null);

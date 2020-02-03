@@ -1,5 +1,6 @@
-instructions.configure = \
-  org.eclipse.equinox.p2.touchpoint.eclipse.setJvm(jvm:plugins/hu.blackbelt.judo.eclipse.jdk.zulu.win32.x86_64_${qualifiedVersion}/jdk/bin);
-
-instructions.unconfigure = \
-  org.eclipse.equinox.p2.touchpoint.eclipse.setJvm(jvm:null);
+instructions.install = \
+org.eclipse.equinox.p2.touchpoint.eclipse.setJvm(jvm:${artifact.location}/jdk/jre/bin/server/jvm.dll);\
+org.eclipse.equinox.p2.touchpoint.eclipse.addJvmArg(jvmArg:-Xshareclasses:nonfatal);\
+org.eclipse.equinox.p2.touchpoint.eclipse.addProgramArg(programArg:-clean);
+instructions.uninstall = \
+org.eclipse.equinox.p2.touchpoint.eclipse.setJvm(jvm:null);
