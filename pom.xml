@@ -12,6 +12,7 @@
 	<packaging>pom</packaging>
 
 	<name>Bundled Oracle Java JRE</name>
+    <description>Bundled Oracle Java JRE</description>
 
     
     <url>http://github.com/${project-repositoryId}</url>
