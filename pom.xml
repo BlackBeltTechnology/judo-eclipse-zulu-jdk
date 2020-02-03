@@ -38,7 +38,15 @@
             <organizationUrl>http://www.blackbelt.hu</organizationUrl>
         </developer>
     </developers>
-    
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://opensource.org/licenses/Apache-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
     <properties>
         <project-shortname>judo-eclipse-zulu-jdk</project-shortname>
         <project-repositoryId>BlackBeltTechnology/judo-eclipse-zulu-jdk</project-repositoryId>
