@@ -2,7 +2,7 @@
 <feature
       id="hu.blackbelt.judo.eclipse.jdk.zulu.feature"
       label="%Bundle-Name"
-      version="8.0.232.qualifier"
+      version="8.0.232"
       provider-name="%Bundle-Vendor">
 
    <plugin
