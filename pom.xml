@@ -8,13 +8,11 @@
 
     <groupId>hu.blackbelt.judo.eclipse.jdk.zulu</groupId>
 	<artifactId>parent</artifactId>
-    <version>8.0.233-SNAPSHOT</version>
+    <version>8.0.242-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>Bundled Oracle Java JRE</name>
-    <description>Bundled Oracle Java JRE</description>
+	<name>Bundled Zulu Java JDK</name>
 
-    
     <url>http://github.com/${project-repositoryId}</url>
 
     <issueManagement>
@@ -39,15 +37,7 @@
             <organizationUrl>http://www.blackbelt.hu</organizationUrl>
         </developer>
     </developers>
-
-    <licenses>
-        <license>
-            <name>Apache License, Version 2.0</name>
-            <url>https://opensource.org/licenses/Apache-2.0</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-
+    
     <properties>
         <project-shortname>judo-eclipse-zulu-jdk</project-shortname>
         <project-repositoryId>BlackBeltTechnology/judo-eclipse-zulu-jdk</project-repositoryId>
