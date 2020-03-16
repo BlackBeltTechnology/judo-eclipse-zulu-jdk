@@ -15,11 +15,21 @@
 
     <url>http://github.com/${project-repositoryId}</url>
 
+    <description>Zulu JDK for Eclipse</description>
+
     <issueManagement>
         <url>https://github.com/${project-repositoryId}/issues</url>
         <system>GitHub Issues</system>
     </issueManagement>
 
+    <licenses>
+        <license>
+            <name>GNU General Public License, version 2, with the Classpath Exception</name>
+            <url>https://openjdk.java.net/legal/gplv2+ce.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    
     <scm>
         <connection>scm:git:git@github.com:${project-repositoryId}.git</connection>
         <developerConnection>scm:git:ssh://${git.username}@github.com:${project-repositoryId}.git
