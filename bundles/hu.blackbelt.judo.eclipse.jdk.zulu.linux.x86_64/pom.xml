@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>hu.blackbelt.judo.eclipse.jdk.zulu</groupId>
 		<artifactId>jdk-bundles</artifactId>
-		<version>8.0.242</version>
+		<version>11.0.8</version>
 		<relativePath>..</relativePath>
 	</parent>
 
@@ -16,6 +16,7 @@
 		<download.filePostfix>linux_x64.tar.gz</download.filePostfix>
 		<download.unzippedFolderPostfix>linux_x64</download.unzippedFolderPostfix>
 		<download.type>gzip</download.type>
+		<jdk.folder></jdk.folder>
 	</properties>
 
 	<build>

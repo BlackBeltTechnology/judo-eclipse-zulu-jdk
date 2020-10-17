@@ -5,7 +5,7 @@
 	<parent>
         <groupId>hu.blackbelt.judo.eclipse.jdk.zulu</groupId>
         <artifactId>parent</artifactId>
-        <version>8.0.242</version>
+        <version>11.0.8</version>
 		<relativePath>..</relativePath>
 	</parent>
 
@@ -17,7 +17,7 @@
 		<!-- to test locally, place files in a local directory
 		<download.url>file:///Users/.../zulu/</download.url>
 		-->
-		<download.file>zulu8.44.0.11-ca-jdk8.0.242-</download.file>
+		<download.file>zulu11.41.23-ca-jdk11.0.8-</download.file>
 		<download.filePostfix>os_arch.zip</download.filePostfix>
 		<download.unzippedFolder>${download.file}</download.unzippedFolder>
 		<download.unzippedFolderPostfix>os_arch</download.unzippedFolderPostfix>
@@ -151,24 +151,24 @@
                                 <exclude>${jdk.folder}/sample/**/*</exclude>
                                 <exclude>${jdk.folder}/demo/**/*</exclude>
                                 <exclude>${jdk.folder}/include/**/*</exclude>
-                                <exclude>${jdk.folder}/src.zip
-                                </exclude>
+								<exclude>${jdk.folder}/src.zip</exclude>
+								<exclude>${jdk.folder}/jmods/**/*</exclude>
 
                                 <!-- bin -->
-								<exclude>${jdk.folder}/jre/bin/rmid</exclude>
-								<exclude>${jdk.folder}/jre/bin/rmiregistry</exclude>
-								<exclude>${jdk.folder}/jre/bin/tnameserv</exclude>
-								<exclude>${jdk.folder}/jre/bin/keytool</exclude>
-								<exclude>${jdk.folder}/jre/bin/policytool</exclude>
-								<exclude>${jdk.folder}/jre/bin/orbd</exclude>
-								<exclude>${jdk.folder}/jre/bin/servertool</exclude>
-								<exclude>${jdk.folder}/jre/bin/javaws</exclude>
-								<exclude>${jdk.folder}/jre/bin/pack200</exclude>
-								<exclude>${jdk.folder}/jre/bin/unpack200</exclude>
-								<exclude>${jdk.folder}/jre/bin/jrunscript</exclude>
-								<exclude>${jdk.folder}/jre/bin/jaotc</exclude>
-								<exclude>${jdk.folder}/jre/bin/jfr</exclude>
-								<exclude>${jdk.folder}/jre/bin/jjs</exclude>
+								<exclude>${jdk.folder}/bin/rmid</exclude>
+								<exclude>${jdk.folder}/bin/rmiregistry</exclude>
+								<exclude>${jdk.folder}/bin/tnameserv</exclude>
+								<exclude>${jdk.folder}/bin/keytool</exclude>
+								<exclude>${jdk.folder}/bin/policytool</exclude>
+								<exclude>${jdk.folder}/bin/orbd</exclude>
+								<exclude>${jdk.folder}/bin/servertool</exclude>
+								<exclude>${jdk.folder}/bin/javaws</exclude>
+								<exclude>${jdk.folder}/bin/pack200</exclude>
+								<exclude>${jdk.folder}/bin/unpack200</exclude>
+								<exclude>${jdk.folder}/bin/jrunscript</exclude>
+								<exclude>${jdk.folder}/bin/jaotc</exclude>
+								<exclude>${jdk.folder}/bin/jfr</exclude>
+								<exclude>${jdk.folder}/bin/jjs</exclude>
 
                                 <exclude>${jdk.folder}/bin/appletviewer</exclude>
                                 <exclude>${jdk.folder}/bin/clhsdb</exclude>
@@ -214,83 +214,82 @@
                                 <exclude>${jdk.folder}/bin/xjc</exclude>
 
 								<!-- bin [Microsoft Windows] -->
-								<exclude>${jdk.folder}/jre/bin/rmid.exe</exclude>
-								<exclude>${jdk.folder}/jre/bin/rmiregistry.exe</exclude>
-								<exclude>${jdk.folder}/jre/bin/tnameserv.exe</exclude>
-								<exclude>${jdk.folder}/jre/bin/keytool.exe</exclude>
-								<exclude>${jdk.folder}/jre/bin/policytool.exe</exclude>
-								<exclude>${jdk.folder}/jre/bin/orbd.exe</exclude>
-								<exclude>${jdk.folder}/jre/bin/servertool.exe</exclude>
-								<exclude>${jdk.folder}/jre/bin/javaws.exe</exclude>
-								<exclude>${jdk.folder}/jre/bin/kinit.exe</exclude>
-								<exclude>${jdk.folder}/jre/bin/klist.exe</exclude>
-								<exclude>${jdk.folder}/jre/bin/ktab.exe</exclude>
-								<exclude>${jdk.folder}/jre/bin/javaws.exe</exclude>
-								<exclude>${jdk.folder}/jre/bin/pack200.exe</exclude>
-								<exclude>${jdk.folder}/jre/bin/unpack200.exe</exclude>
-								<exclude>${jdk.folder}/jre/bin/jrunscript.exe</exclude>
-								<exclude>${jdk.folder}/jre/bin/jaotc.exe</exclude>
-								<exclude>${jdk.folder}/jre/bin/jfr.exe</exclude>
-								<exclude>${jdk.folder}/jre/bin/jabswitch.exe</exclude>
-								<exclude>${jdk.folder}/jre/bin/jaccessinspector.exe</exclude>
-								<exclude>${jdk.folder}/jre/bin/jaccesswalker.exe</exclude>
+								<exclude>${jdk.folder}/bin/rmid.exe</exclude>
+								<exclude>${jdk.folder}/bin/rmiregistry.exe</exclude>
+								<exclude>${jdk.folder}/bin/tnameserv.exe</exclude>
+								<exclude>${jdk.folder}/bin/keytool.exe</exclude>
+								<exclude>${jdk.folder}/bin/policytool.exe</exclude>
+								<exclude>${jdk.folder}/bin/orbd.exe</exclude>
+								<exclude>${jdk.folder}/bin/servertool.exe</exclude>
+								<exclude>${jdk.folder}/bin/javaws.exe</exclude>
+								<exclude>${jdk.folder}/bin/kinit.exe</exclude>
+								<exclude>${jdk.folder}/bin/klist.exe</exclude>
+								<exclude>${jdk.folder}/bin/ktab.exe</exclude>
+								<exclude>${jdk.folder}/bin/javaws.exe</exclude>
+								<exclude>${jdk.folder}/bin/pack200.exe</exclude>
+								<exclude>${jdk.folder}/bin/unpack200.exe</exclude>
+								<exclude>${jdk.folder}/bin/jrunscript.exe</exclude>
+								<exclude>${jdk.folder}/bin/jaotc.exe</exclude>
+								<exclude>${jdk.folder}/bin/jfr.exe</exclude>
+								<exclude>${jdk.folder}/bin/jabswitch.exe</exclude>
+								<exclude>${jdk.folder}/bin/jaccessinspector.exe</exclude>
+								<exclude>${jdk.folder}/bin/jaccesswalker.exe</exclude>
                                 
-                                <exclude>${jdk.folder}/jre/bin/appletviewer.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/clhsdb.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/extcheck.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/hsdb.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/idlj.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/jabswitch.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/jar.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/jarsigner.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/java-rmi.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/javac.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/javadoc.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/javah.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/javap.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/javaw.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/jcmd.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/jconsole.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/jdb.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/jdeps.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/jfr.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/jhat.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/jinfo.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/jjs.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/jli.dll</exclude>
-                                <exclude>${jdk.folder}/jre/bin/jmap.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/jps.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/jrunscript.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/jsadebugd.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/jstack.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/jstat.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/jstatd.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/keytool.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/kinit.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/klist.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/ktab.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/msvcr100.dll</exclude>
-                                <exclude>${jdk.folder}/jre/bin/native2ascii.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/orbd.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/pack200.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/policytool.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/rmic.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/rmid.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/rmiregistry.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/schemagen.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/serialver.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/servertool.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/tnameserv.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/unpack200.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/wsgen.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/wsimport.exe</exclude>
-                                <exclude>${jdk.folder}/jre/bin/xjc.exe</exclude>
+                                <exclude>${jdk.folder}/bin/appletviewer.exe</exclude>
+                                <exclude>${jdk.folder}/bin/clhsdb.exe</exclude>
+                                <exclude>${jdk.folder}/bin/extcheck.exe</exclude>
+                                <exclude>${jdk.folder}/bin/hsdb.exe</exclude>
+                                <exclude>${jdk.folder}/bin/idlj.exe</exclude>
+                                <exclude>${jdk.folder}/bin/jabswitch.exe</exclude>
+                                <exclude>${jdk.folder}/bin/jar.exe</exclude>
+                                <exclude>${jdk.folder}/bin/jarsigner.exe</exclude>
+                                <exclude>${jdk.folder}/bin/java-rmi.exe</exclude>
+                                <exclude>${jdk.folder}/bin/javac.exe</exclude>
+                                <exclude>${jdk.folder}/bin/javadoc.exe</exclude>
+                                <exclude>${jdk.folder}/bin/javah.exe</exclude>
+                                <exclude>${jdk.folder}/bin/javap.exe</exclude>
+                                <exclude>${jdk.folder}/bin/javaw.exe</exclude>
+                                <exclude>${jdk.folder}/bin/jcmd.exe</exclude>
+                                <exclude>${jdk.folder}/bin/jconsole.exe</exclude>
+                                <exclude>${jdk.folder}/bin/jdb.exe</exclude>
+                                <exclude>${jdk.folder}/bin/jdeps.exe</exclude>
+                                <exclude>${jdk.folder}/bin/jfr.exe</exclude>
+                                <exclude>${jdk.folder}/bin/jhat.exe</exclude>
+                                <exclude>${jdk.folder}/bin/jinfo.exe</exclude>
+                                <exclude>${jdk.folder}/bin/jjs.exe</exclude>
+                                <exclude>${jdk.folder}/bin/jmap.exe</exclude>
+                                <exclude>${jdk.folder}/bin/jps.exe</exclude>
+                                <exclude>${jdk.folder}/bin/jrunscript.exe</exclude>
+                                <exclude>${jdk.folder}/bin/jsadebugd.exe</exclude>
+                                <exclude>${jdk.folder}/bin/jstack.exe</exclude>
+                                <exclude>${jdk.folder}/bin/jstat.exe</exclude>
+                                <exclude>${jdk.folder}/bin/jstatd.exe</exclude>
+                                <exclude>${jdk.folder}/bin/keytool.exe</exclude>
+                                <exclude>${jdk.folder}/bin/kinit.exe</exclude>
+                                <exclude>${jdk.folder}/bin/klist.exe</exclude>
+                                <exclude>${jdk.folder}/bin/ktab.exe</exclude>
+                                <exclude>${jdk.folder}/bin/native2ascii.exe</exclude>
+                                <exclude>${jdk.folder}/bin/orbd.exe</exclude>
+                                <exclude>${jdk.folder}/bin/pack200.exe</exclude>
+                                <exclude>${jdk.folder}/bin/policytool.exe</exclude>
+                                <exclude>${jdk.folder}/bin/rmic.exe</exclude>
+                                <exclude>${jdk.folder}/bin/rmid.exe</exclude>
+                                <exclude>${jdk.folder}/bin/rmiregistry.exe</exclude>
+                                <exclude>${jdk.folder}/bin/schemagen.exe</exclude>
+                                <exclude>${jdk.folder}/bin/serialver.exe</exclude>
+                                <exclude>${jdk.folder}/bin/servertool.exe</exclude>
+                                <exclude>${jdk.folder}/bin/tnameserv.exe</exclude>
+                                <exclude>${jdk.folder}/bin/unpack200.exe</exclude>
+                                <exclude>${jdk.folder}/bin/wsgen.exe</exclude>
+                                <exclude>${jdk.folder}/bin/wsimport.exe</exclude>
+                                <exclude>${jdk.folder}/bin/xjc.exe</exclude>
 
 								<!-- lib/ext -->
-								<exclude>${jdk.folder}/jre/lib/ext/cldrdata.jar</exclude>
-								<exclude>${jdk.folder}/jre/lib/ext/jaccess.jar</exclude>
-								<exclude>${jdk.folder}/jre/lib/ext/nashorn.jar</exclude>
-								<exclude>${jdk.folder}/jre/lib/ext/zipfs.jar</exclude>
+								<exclude>${jdk.folder}/lib/src.zip</exclude>
+								<exclude>${jdk.folder}/lib/ext/cldrdata.jar</exclude>
+								<exclude>${jdk.folder}/lib/ext/jaccess.jar</exclude>
+								<exclude>${jdk.folder}/lib/ext/nashorn.jar</exclude>
+								<exclude>${jdk.folder}/lib/ext/zipfs.jar</exclude>
 							</excludes>
 						</fileSet>
 						<!-- filter p2.inf w/ correct version info -->
