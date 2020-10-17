@@ -8,7 +8,7 @@
 
     <groupId>hu.blackbelt.judo.eclipse.jdk.zulu</groupId>
 	<artifactId>parent</artifactId>
-    <version>8.0.243-SNAPSHOT</version>
+    <version>11.0.8-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>Bundled Zulu Java JDK</name>
