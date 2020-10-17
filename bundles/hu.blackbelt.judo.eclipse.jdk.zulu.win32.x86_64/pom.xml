@@ -5,7 +5,7 @@
     <parent>
         <groupId>hu.blackbelt.judo.eclipse.jdk.zulu</groupId>
         <artifactId>jdk-bundles</artifactId>
-        <version>8.0.243-SNAPSHOT</version>
+        <version>11.0.8-SNAPSHOT</version>
         <relativePath>..</relativePath>
     </parent>
 
@@ -15,6 +15,7 @@
 	<properties>
 		<download.filePostfix>win_x64.zip</download.filePostfix>
 		<download.unzippedFolderPostfix>win_x64</download.unzippedFolderPostfix>
+		<jdk.folder></jdk.folder>
 	</properties>
 
 	<build>
