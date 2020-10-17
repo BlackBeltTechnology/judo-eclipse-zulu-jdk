@@ -257,7 +257,6 @@
                                 <exclude>${jdk.folder}/bin/jhat.exe</exclude>
                                 <exclude>${jdk.folder}/bin/jinfo.exe</exclude>
                                 <exclude>${jdk.folder}/bin/jjs.exe</exclude>
-                                <exclude>${jdk.folder}/bin/jli.dll</exclude>
                                 <exclude>${jdk.folder}/bin/jmap.exe</exclude>
                                 <exclude>${jdk.folder}/bin/jps.exe</exclude>
                                 <exclude>${jdk.folder}/bin/jrunscript.exe</exclude>
@@ -269,7 +268,6 @@
                                 <exclude>${jdk.folder}/bin/kinit.exe</exclude>
                                 <exclude>${jdk.folder}/bin/klist.exe</exclude>
                                 <exclude>${jdk.folder}/bin/ktab.exe</exclude>
-                                <exclude>${jdk.folder}/bin/msvcr100.dll</exclude>
                                 <exclude>${jdk.folder}/bin/native2ascii.exe</exclude>
                                 <exclude>${jdk.folder}/bin/orbd.exe</exclude>
                                 <exclude>${jdk.folder}/bin/pack200.exe</exclude>
