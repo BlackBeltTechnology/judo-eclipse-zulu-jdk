@@ -6,8 +6,7 @@
   <parent>
     <groupId>hu.blackbelt.judo.eclipse.jdk.zulu</groupId>
     <artifactId>parent</artifactId>
-    <version>11.0.8-SNAPSHOT</version>
-    <relativePath>..</relativePath>
+    <version>${revision}</version>
   </parent>
 
   <artifactId>hu.blackbelt.judo.eclipse.jdk.zulu.updatesite</artifactId>
@@ -17,5 +16,26 @@
     <skipDeployment>false</skipDeployment>
     <skip-signing>true</skip-signing>
   </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.tycho</groupId>
+                <artifactId>tycho-p2-repository-plugin</artifactId>
+                <version>${tycho-version}</version>
+                <executions>
+                    <execution>
+                        <id>default-assemble-repository</id>
+                        <goals>
+                            <goal>assemble-repository</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <skipArchive>true</skipArchive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

@@ -3,12 +3,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-    <parent>
-      <groupId>hu.blackbelt.judo.eclipse.jdk.zulu</groupId>
-      <artifactId>test-app</artifactId>
-      <version>11.0.8-SNAPSHOT</version>
-      <relativePath>..</relativePath>
-    </parent>
+	<parent>
+        <groupId>hu.blackbelt.judo.eclipse.jdk.zulu</groupId>
+        <artifactId>parent</artifactId>
+        <version>${revision}</version>
+	</parent>
 
 	<artifactId>test.rcp</artifactId>
 	<packaging>eclipse-plugin</packaging>
