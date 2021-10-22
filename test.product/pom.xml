@@ -3,12 +3,11 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
   <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>hu.blackbelt.judo.eclipse.jdk.zulu</groupId>
-    <artifactId>test-app</artifactId>
-    <version>11.0.8-SNAPSHOT</version>
-    <relativePath>..</relativePath>
-  </parent>
+	<parent>
+        <groupId>hu.blackbelt.judo.eclipse.jdk.zulu</groupId>
+        <artifactId>parent</artifactId>
+        <version>${revision}</version>
+	</parent>
 
   <artifactId>test.product</artifactId>
   <packaging>eclipse-repository</packaging>
