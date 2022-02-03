@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+        <groupId>hu.blackbelt.judo.eclipse.jdk.zulu</groupId>
+        <artifactId>parent</artifactId>
+        <version>${revision}</version>
+	</parent>
+
+    <artifactId>hu.blackbelt.judo.eclipse.jdk.zulu.macosx.aarch64</artifactId>
+	<packaging>eclipse-plugin</packaging>
+
+	<properties>
+		<download.filePostfix>macosx_aarch64.zip</download.filePostfix>
+		<download.unzippedFolderPostfix>macosx_aarch64/zulu-11.jdk/Contents/Home</download.unzippedFolderPostfix>
+		<jdk.folder>Contents/Home</jdk.folder>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<configuration>
+					<resolver>p2</resolver>
+					<pomDependencies>consider</pomDependencies>
+					<environments>
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>aarch64</arch>
+						</environment>
+					</environments>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jarsigner-plugin</artifactId>
+				<version>${jarsigner.plugin.version}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-packaging-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

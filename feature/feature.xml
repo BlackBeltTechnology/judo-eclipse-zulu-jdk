@@ -2,28 +2,47 @@
 <feature
       id="hu.blackbelt.judo.eclipse.jdk.zulu.feature"
       label="%Bundle-Name"
-      version="11.0.13.qualifier"
+      version="11.0.14.qualifier"
       provider-name="%Bundle-Vendor">
 
    <plugin
          id="hu.blackbelt.judo.eclipse.jdk.zulu.linux.x86_64"
-         version="0.0.0"
          os="linux"
          arch="x86_64"
-         unpack="true"/>
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
 
    <plugin
          id="hu.blackbelt.judo.eclipse.jdk.zulu.macosx.x86_64"
-         version="0.0.0"
          os="macosx"
          arch="x86_64"
-         unpack="true"/>
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
 
    <plugin
          id="hu.blackbelt.judo.eclipse.jdk.zulu.win32.x86_64"
-         version="0.0.0"
          os="win32"
          arch="x86_64"
-         unpack="true"/>
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="hu.blackbelt.judo.eclipse.jdk.zulu.linux.aarch64"
+         os="linux"
+         arch="aarch64"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="hu.blackbelt.judo.eclipse.jdk.zulu.macosx.aarch64"
+         os="macosx"
+         arch="aarch64"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
 
 </feature>
