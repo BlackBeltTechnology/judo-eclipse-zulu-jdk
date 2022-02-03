@@ -49,7 +49,7 @@
     </developers>
     
     <properties>
-        <revision>11.0.13-SNAPSHOT</revision>
+        <revision>11.0.14-SNAPSHOT</revision>
         <maven>3.8.3</maven>
         <project-shortname>judo-eclipse-zulu-jdk</project-shortname>
         <project-repositoryId>BlackBeltTechnology/judo-eclipse-zulu-jdk</project-repositoryId>
@@ -57,7 +57,7 @@
         <timestamp>${maven.build.timestamp}</timestamp>
         <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
 
-        <tycho-version>2.5.0</tycho-version>
+        <tycho-version>2.6.0</tycho-version>
 		<jarsigner.plugin.version>3.0.0</jarsigner.plugin.version>
 		<jarsigner.skip>true</jarsigner.skip>
 
@@ -66,7 +66,7 @@
 		<!-- to test locally, place files in a local directory
 		<download.url>file:///Users/.../zulu/</download.url>
 		-->
-		<download.file>zulu11.52.13-ca-jdk11.0.13-</download.file>
+		<download.file>zulu11.54.23-ca-jdk11.0.14-</download.file>
 		<download.filePostfix>os_arch.zip</download.filePostfix>
 		<download.unzippedFolder>${download.file}</download.unzippedFolder>
 		<download.unzippedFolderPostfix>os_arch</download.unzippedFolderPostfix>
@@ -80,7 +80,7 @@
 		<repository>
 			<id>eclipse</id>
 			<layout>p2</layout>
-			<url>https://download.eclipse.org/eclipse/updates/4.9/R-4.9-201809060745</url>
+			<url>https://download.eclipse.org/eclipse/updates/4.22/R-4.22-202111241800/</url>
 		</repository>
 	</repositories>
 
@@ -89,7 +89,6 @@
             <plugin>
                 <groupId>org.eclipse.tycho</groupId>
                 <artifactId>tycho-versions-plugin</artifactId>
-                <version>${tycho-version}</version>
             </plugin>
             
             <plugin>
@@ -101,7 +100,6 @@
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>target-platform-configuration</artifactId>
-				<version>${tycho-version}</version>
 				<configuration>
 					<resolver>p2</resolver>
 					<pomDependencies>consider</pomDependencies>
@@ -112,9 +110,19 @@
 							<arch>x86_64</arch>
 						</environment>
 						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>aarch64</arch>
+						</environment>
+						<environment>
 							<os>macosx</os>
 							<ws>cocoa</ws>
 							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>aarch64</arch>
 						</environment>
 						<environment>
 							<os>win32</os>
@@ -414,6 +422,8 @@
 						</additionalFileSets>
 					</configuration>
 				</plugin>
+
+
 				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
@@ -450,6 +460,44 @@
 										</versionRange>
 										<goals>
 											<goal>exec</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.codehaus.mojo
+										</groupId>
+										<artifactId>
+											flatten-maven-plugin
+										</artifactId>
+										<versionRange>
+											[1.1.0,)
+										</versionRange>
+										<goals>
+											<goal>flatten</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.eclipse.tycho
+										</groupId>
+										<artifactId>
+											target-platform-configuration
+										</artifactId>
+										<versionRange>
+											[2.6.0,)
+										</versionRange>
+										<goals>
+											<goal>target-platform</goal>
 										</goals>
 									</pluginExecutionFilter>
 									<action>
@@ -512,6 +560,8 @@
                 </property>
             </activation>
             <modules>
+                <module>hu.blackbelt.judo.eclipse.jdk.zulu.linux.aarch64</module>
+                <module>hu.blackbelt.judo.eclipse.jdk.zulu.macosx.aarch64</module>
                 <module>hu.blackbelt.judo.eclipse.jdk.zulu.linux.x86_64</module>
                 <module>hu.blackbelt.judo.eclipse.jdk.zulu.macosx.x86_64</module>
                 <module>hu.blackbelt.judo.eclipse.jdk.zulu.win32.x86_64</module>
