@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Zulu JDK
+Bundle-SymbolicName: hu.blackbelt.judo.eclipse.jdk.zulu.macosx.aarch64;singleton:=true
+Bundle-Version: 11.0.15.qualifier
+Bundle-Vendor: BlackBelt Technology
+Eclipse-PlatformFilter: (& (osgi.os=macosx) (osgi.arch=aarch64))
+Eclipse-BundleShape: dir
