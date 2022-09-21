@@ -11,7 +11,7 @@ jobs:
   build:
     name: ⏳ Build, test and deploy artifacts
     runs-on: judong
-    timeout-minutes: 120
+    timeout-minutes: 30
     env:
       SIGN_KEY_ID: ${{ secrets.GPG_KEYNAME }}
       SIGN_KEY_PASS: ${{ secrets.GPG_PASSPHRASE }}
@@ -85,7 +85,7 @@ jobs:
             BASE_VERSION=${POM_VERSION}
           fi
           if [[ "${{ github.base_ref }}" == "master" ]]; then
-            VERSION_NUMBER=${BASE_VERSION}.$(date +%Y%m%d_%H%M%S)
+            VERSION_NUMBER=${BASE_VERSION}
           else
             TAG_NAME=$(echo "${{ steps.context.outputs.branch }}" | cut -d ' ' -f2 | tr '#\/\.-' '_')
             VERSION_NUMBER=${BASE_VERSION}.$(date +%Y%m%d_%H%M%S)_${{ steps.context.outputs.shortCommitId }}_${TAG_NAME//[(\)]}
@@ -105,7 +105,7 @@ jobs:
           -DnewVersion=${{ steps.version.outputs.version }} \
           -DgenerateBackupPoms=false \
           -Dtycho.mode=maven \
-          versions:set
+          tycho-versions:set-version
 
       - name: 🚧 Set tycho version
         run: |-
@@ -154,7 +154,7 @@ jobs:
 
           REP_DIR_LEN=`echo -n "$REPOSITORY_DIR" | wc -c`; REP_DIR_LEN=$(($REP_DIR_LEN + 1))
 
-          find $REPOSITORY_DIR -type f -print0 | xargs -0 -I file echo "file" | cut -c$REP_DIR_LEN- | xargs -P $NUM_OF_PROC -I {} bash -c 'callUpload "$@"' _ {} 
+          find $REPOSITORY_DIR -type f -print0 | xargs -0 -I file echo "file" | cut -c$REP_DIR_LEN- | xargs -P $NUM_OF_PROC -I {} bash -c 'callUpload "$@"' _ {}
 
 #      - name: 🔎 Sonar Metrics
 #        if: steps.context.outputs.branch == 'develop'
