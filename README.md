@@ -27,7 +27,7 @@ The Java version is configured in [bundles/pom.xml](bundles/pom.xml#L20):
 ```xml
 <properties>
   <download.url>https://cdn.azul.com/zulu/bin/</download.url>
-  <download.file>zulu11.33.15-ca-jre11.0.4-</download.file>
+  <download.file>zulu11.58.23-ca-jdk11.0.16-</download.file>
   ...
 </properties>
 ```
