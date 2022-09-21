@@ -32,7 +32,8 @@
     
     <scm>
         <connection>scm:git:git@github.com:${project-repositoryId}.git</connection>
-        <developerConnection>scm:git:ssh://${git.username}@github.com:${project-repositoryId}.git
+        <!--suppress UnresolvedMavenProperty -->
+		<developerConnection>scm:git:ssh://${git.username}@github.com:${project-repositoryId}.git
         </developerConnection>
         <url>http://github.com/${project-repositoryId}</url>
     </scm>
@@ -49,7 +50,7 @@
     </developers>
     
     <properties>
-        <revision>11.0.15</revision>
+        <revision>11.0.16</revision>
         <maven>3.8.3</maven>
         <project-shortname>judo-eclipse-zulu-jdk</project-shortname>
         <project-repositoryId>BlackBeltTechnology/judo-eclipse-zulu-jdk</project-repositoryId>
@@ -57,7 +58,7 @@
         <timestamp>${maven.build.timestamp}</timestamp>
         <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
 
-        <tycho-version>2.7.3</tycho-version>
+        <tycho-version>2.7.5</tycho-version>
 		<jarsigner.plugin.version>3.0.0</jarsigner.plugin.version>
 		<jarsigner.skip>true</jarsigner.skip>
 
@@ -66,7 +67,7 @@
 		<!-- to test locally, place files in a local directory
 		<download.url>file:///Users/.../zulu/</download.url>
 		-->
-		<download.file>zulu11.56.19-ca-jdk11.0.15-</download.file>
+		<download.file>zulu11.58.23-ca-jdk11.0.16.1-</download.file>
 		<download.filePostfix>os_arch.zip</download.filePostfix>
 		<download.unzippedFolder>${download.file}</download.unzippedFolder>
 		<download.unzippedFolderPostfix>os_arch</download.unzippedFolderPostfix>
@@ -135,7 +136,7 @@
 			<plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>flatten-maven-plugin</artifactId>
-                <version>1.1.0</version>
+                <version>1.3.0</version>
                 <configuration>
                     <updatePomFile>true</updatePomFile>
                     <flattenMode>resolveCiFriendliesOnly</flattenMode>
@@ -178,7 +179,7 @@
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>exec-maven-plugin</artifactId>
-                    <version>3.0.0</version>
+                    <version>3.1.0</version>
 					<executions>
 						<execution>
 							<id>Download Zulu: ${download.file}${download.filePostfix}</id>
@@ -202,7 +203,7 @@
 				</plugin>
 				<plugin>
 					<artifactId>maven-antrun-plugin</artifactId>
-					<version>1.8</version>
+					<version>3.1.0</version>
 					<executions>
 						<execution>
 							<phase>process-resources</phase>
@@ -243,7 +244,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-resources-plugin</artifactId>
-					<version>2.7</version>
+					<version>3.3.0</version>
 					<executions>
 						<execution>
 							<id>process-p2.inf</id>
@@ -534,7 +535,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-dependency-plugin</artifactId>
-					<version>2.10</version>
+					<version>3.3.0</version>
 				</plugin>
 				<plugin>
 					<groupId>org.eclipse.tycho</groupId>
@@ -650,6 +651,7 @@
 							<serverId>ossrh</serverId>
 							<nexusUrl>https://oss.sonatype.org/</nexusUrl>
 							<autoReleaseAfterClose>true</autoReleaseAfterClose>
+							<stagingProgressTimeoutMinutes>15</stagingProgressTimeoutMinutes>
 						</configuration>
 					</plugin>
 				</plugins>
@@ -737,7 +739,7 @@
 							<dependency>
 								<groupId>org.asciidoctor</groupId>
 								<artifactId>asciidoctorj-diagram-ditaamini</artifactId>
-								<version>1.0.0</version>
+								<version>1.0.3</version>
 							</dependency>
 						</dependencies>
 						<configuration>

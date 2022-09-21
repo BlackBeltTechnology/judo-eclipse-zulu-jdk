@@ -3,7 +3,7 @@
 <feature
       id="hu.blackbelt.judo.eclipse.jdk.zulu.feature"
       label="Zulu JDK"
-      version="11.0.15.qualifier"
+      version="11.0.16"
       provider-name="BlackBelt Technology">
 
    <description url="https://github.com/BlackBeltTechnology/emf-genmodel-generator">
