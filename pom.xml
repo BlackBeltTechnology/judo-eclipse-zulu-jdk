@@ -651,6 +651,7 @@
 							<serverId>ossrh</serverId>
 							<nexusUrl>https://oss.sonatype.org/</nexusUrl>
 							<autoReleaseAfterClose>true</autoReleaseAfterClose>
+							<stagingProgressTimeoutMinutes>15</stagingProgressTimeoutMinutes>
 						</configuration>
 					</plugin>
 				</plugins>
@@ -700,7 +701,7 @@
 
 			<properties>
 				<asciidoctor.maven.plugin.version>2.2.2</asciidoctor.maven.plugin.version>
-				<asciidoctorj.version>2.5.5</asciidoctorj.version>
+				<asciidoctorj.version>2.5.6</asciidoctorj.version>
 				<asciidoctorj.diagram.version>2.2.3</asciidoctorj.diagram.version>
 				<jruby.version>9.3.4.0</jruby.version>
 			</properties>
