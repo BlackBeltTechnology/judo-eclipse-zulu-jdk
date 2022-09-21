@@ -50,7 +50,7 @@
     </developers>
     
     <properties>
-        <revision>11.0.16-SNAPSHOT</revision>
+        <revision>11.0.16</revision>
         <maven>3.8.3</maven>
         <project-shortname>judo-eclipse-zulu-jdk</project-shortname>
         <project-repositoryId>BlackBeltTechnology/judo-eclipse-zulu-jdk</project-repositoryId>
